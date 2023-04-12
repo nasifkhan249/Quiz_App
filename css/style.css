@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+body{
+    background-color: #f1f1f1;
+}
+
+
+
+
+/* ditails part start */
+.myQuiz{
+    width: 320px;
+    height: 580px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: rgba(0 0 0 / 10%) 0px 10px 50px;
+    border-radius: 45px;
+}
+
+.img img{
+    width: 100%;
+}
+
+.txt{
+    width: 90%;
+    margin: auto;
+}
+
+.txt h3{
+    margin-top: 20px;
+}
+
+.txt p{
+    line-height: 30px;
+}
+
+.mybtns{
+    width: 60%;
+    margin-top: -20px;
+    margin-left: 179px !important;
+}
+.mybtns button{
+    font-size: 20px;
+    font-weight: 600;
+    background-color: tomato;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 10px 25px;
+    border-radius: 57px 0px 51px 0px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.mybtns button:hover{
+    background-color: cornflowerblue;
+}
+
+/* ditails part end */
+
+
+
+/* rules ditails start */
+.rulesBox.activeRulesBox{
+    opacity: 1;
+    z-index: 5;
+    pointer-events: auto;
+    transform: translate(-50%,-50%) scale(1);
+}
+.rulesBox{
+    width: 320px;
+    height: 580px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: rgba(0 0 0 / 10%) 0px 10px 50px;
+    border-radius: 45px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+
+.rulseHeading{
+    text-align: center;
+    padding: 20px 25px;
+    border-bottom: 1px solid lightgray;
+}
+
+.rulesList{
+    width: 80%;
+    margin: auto;
+}
+
+ol li{
+    margin-top: 25px;
+    padding: 10px 0px 10px 10px;
+}
+
+.buttons{
+    width: 100%;
+    margin-top: 55px;
+}
+
+.exitButton{
+    font-size: 20px;
+    font-weight: 600;
+    background-color: tomato;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 10px 25px;
+    cursor: pointer;
+    border-radius: 0px 47px 0px 46px;
+    transition: 0.3s ease-in-out;
+}
+
+.exitButton:hover{
+    background-color: red;
+}
+
+.continueButton{
+    font-size: 20px;
+    font-weight: 600;
+    background-color: tomato;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 10px 25px;
+    cursor: pointer;
+    border-radius: 57px 0px 46px 0px;
+    transition: 0.3s ease-in-out;
+    margin-left: 50px;
+}
+
+.continueButton:hover{
+    background-color: cornflowerblue;
+}
+
+
+/* rules ditails end */
+
+
+
+
+
+/* question section start */
+
+.questionBox{
+    width: 320px;
+    height: 580px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: rgba(0 0 0 / 10%) 0px 10px 50px;
+    border-radius: 45px;
+}
+
+.questionSection{
+    position: relative;
+    z-index: 2;
+    height: 70px;
+    padding: 0 30px;
+    border-radius: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.questionSection  .title{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.questionSection .timeCount{
+    width: 130px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #004085;
+    background: #cce5ff;
+    border: 1px solid #b8daff;
+    border-radius: 5px;
+}
+
+.questionSection .timeCount .timeLeft{
+    font-weight: 400;
+    font-size: 15px;
+    
+}
+
+.questionSection .timeCount .secounds{
+    width: 45px;
+    height: 26px;
+    background-color: #4c4b4b;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    line-height: 26px;
+    border: 1px solid #4c4b4b;
+    user-select: none;
+    margin-left: 16px;
+}
+
+
+.questionBox .time-lines {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 3px;
+    background-color: #007bff;
+}
+
+.questionBox .sections{
+    padding: 25px 30px 20px 30px;
+}
+
+.sections .Html{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.sections .MyOptions{
+    padding: 20px 0px;
+    display: block;
+
+}
+
+.options{
+    background-color: aliceblue;
+    border: 1px solid #84c5fe;
+    border-radius: 5px;
+    padding: 18px 15px;
+    font-size: 15px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.options:hover{
+    color: #004085;
+    background-color: #cce5ff;
+    border: 1px solid #b8daff;
+}
+
+footer{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid lightgray;
+}
+
+footer .total_que{
+    margin-top: 20px;
+    padding-left: 30px;
+}
+
+footer button{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 6px 35px;
+    outline: none;
+    border: none;
+    border-radius: 57px 0px 51px 0px;
+    box-shadow: rgba(0 0 0 / 10%)0px 10px 50px;
+    background-color: tomato;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    margin-top: 48px;
+}
+/* question section end */
