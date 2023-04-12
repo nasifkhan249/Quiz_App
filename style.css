@@ -81,7 +81,7 @@ body{
     transform: translate(-50%,-50%);
     background-color: #fff;
     box-shadow: rgba(0 0 0 / 10%) 0px 10px 50px;
-    border-radius: 45px;
+    border-radius: 48px;
     opacity: 0;
     pointer-events: none;
 }
@@ -160,8 +160,8 @@ ol li{
 
 
 .questionBox{
-    width: 420px;
-    height: 580px;
+    width: 320px;
+    height: 600px;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -183,7 +183,6 @@ ol li{
 .questionSection{
     position: relative;
     z-index: 2;
-    width: 380px;
     height: 70px;
     padding: 0 20px;
     border-radius: 45px;
@@ -233,7 +232,7 @@ ol li{
 
 
 .sections{
-    padding: 35px 30px 30px 30px;
+    padding: 20px 10px 20px 10px;
             /*top right bottom left */
 }
 
@@ -243,7 +242,7 @@ ol li{
 }
 
 .MyOptions{
-    padding: 30px 10px 10px 10px;
+    padding: 20px 10px 10px 10px;
             /*top right bottom left */
     display: block;
 }
@@ -266,11 +265,12 @@ ol li{
     font-size: 15px;
     font-weight: 600;
     margin-left: 30px;
-    margin-top: -6px;
+    margin-top: 50px;
 }
 
 .nextBtn{
-    font-size: 25px;
+
+    font-size: 19px;
     font-weight: 600;
     background-color: tomato;
     border: none;
@@ -280,10 +280,16 @@ ol li{
     cursor: pointer;
     border-radius: 57px 0px 51px 0px;
     transition: 0.3s ease-in-out;
-    margin-left: 260px;
-    margin-top: 3px;
+    margin-left: 187px;
+    margin-top: 9px;
 }
+
 
 .nextBtn:hover{
     background-color: cadetblue;
+}
+
+.questionBoxFooter{
+    margin-top: 30px;
+    width: 100%;
 }
