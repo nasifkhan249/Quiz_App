@@ -29,9 +29,11 @@ const nextBtn = document.querySelector('.nextBtn');
 let totalCount = 0;
 
 nextBtn.onclick =  ()=>{
-    if(totalCount < questions.length -1){
+    if(totalCount < questions.length-1){
         totalCount++;
         showQuestion(totalCount);
+    }else{
+        console.log(`congrase`);
     }
 }
 
@@ -44,20 +46,28 @@ function showQuestion (index){
     const MyOptions = document.querySelector('.MyOptions');
     let MyOptionsTag = '<div class="options"><span>'+questions[index].option[0]+'</span></div>'
                         +'<div class="options"><span>'+questions[index].option[1]+'</span></div>'
-                        +'<div class="options"><span>'+questions[index].option[3]+'</span></div>'
+                        +'<div class="options"><span>'+questions[index].option[2]+'</span></div>'
                         +'<div class="options"><span>'+questions[index].option[3]+'</span></div>'
                         
     MyOptions.innerHTML = MyOptionsTag;
     const total_que = document.querySelector('.total_que');
     let total_queTag = `${questions[index].number} of 5 Questions`;
     total_que.innerHTML = total_queTag;
+
+    const options = MyOptions.querySelectorAll('.options');
+    for(let i =0;i<options.length;i++){
+        options[i].setAttribute("onclick","optionsSelected(this)");
+    }
 }
 
-
-
-
-
-
-
+function optionsSelected (ans){
+    let userSelet = ans.textContent;
+    let correctAns=questions[totalCount].answer;
+    if(userSelet == correctAns){
+        console.log("You'r answer is right");
+    }else{
+        console.log("You'r answer is false");
+    }
+}
 
 
