@@ -275,6 +275,23 @@ ol li{
 }
 
 
+.options.correct{
+    color: green;
+    background-color: #c9d0d5;
+    border: 1px solid aliceblue;
+}
+
+.options.incorrect{
+    color: red;
+    background-color: #c9d0d5;
+    border: 1px solid aliceblue;
+}
+
+.options.disable{
+    pointer-events: none;
+}
+
+
 .questionBoxFooter{
     margin-top: 30px;
     width: 100%;
