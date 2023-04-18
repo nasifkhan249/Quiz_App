@@ -202,8 +202,10 @@ ol li{
     font-weight: 600;
 }
 
+
+
 .timeCount{
-    width: 140px;
+    width: 110px;
     height: 25px;
     display: flex;
     background-color: tomato;
@@ -217,24 +219,16 @@ ol li{
 .secounds{
     font-size: 18px;
     font-weight: 600;
-    height: 26px;
-    width: 45px;
+    width: 35px;
     color: #fff;
     border-radius: 5px;
-    line-height: 26px;
+    line-height: 25px;
     text-align: center;
     background-color: darkgray;
     border: 1px solid darkgray;
     user-select: none;
 }
 
-.time-lines{
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    height: 3px;
-    background-color: tomato;
-}
 
 
 .sections{
@@ -319,12 +313,12 @@ ol li{
     color: #f1f1f1;
     transition: all 0.3s ease-in-out;
     margin-top: 37px;
+    display: none;
 }
 
 .nextBtn:hover{
     background-color: cadetblue;
 }
-
 
 /* questionBox end  */
 

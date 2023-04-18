@@ -12,6 +12,13 @@ const MyOptions = document.querySelector('.MyOptions');
 
 const nextBtn = document.querySelector('.nextBtn');
 
+const timeCount = document.querySelector('.timeCount .secounds ');
+
+
+
+let tikIcon = '<div class="tick icon"><i class="fas fa-check"></i></div>';
+let crossIcon = '<div class="cross icon"><i class="fas fa-times"></i></div>';
+
 
 startBtn.onclick = () =>{
     rulesBox.classList.add("RulesBoxActive")
@@ -24,6 +31,7 @@ continueButton.onclick = () =>{
     rulesBox.classList.remove("RulesBoxActive")
     questionBox.classList.add("questionBoxActive")
     showQuestion(0);
+    timesCounter (15);
 }   
 
 
@@ -31,14 +39,25 @@ continueButton.onclick = () =>{
 
 
 let totalCount = 0;
+let counter;
+let timeValue = 15;
+
+
 
 nextBtn.onclick =  ()=>{
     if(totalCount < questions.length-1){
         totalCount++;
         showQuestion(totalCount);
+        clearInterval(counter);
+        timesCounter(timeValue);
+
+       
+        nextBtn.style.display = 'none';
+
     }else{
         console.log(`congrase`);
     }
+    
 }
 
 
@@ -67,25 +86,53 @@ function showQuestion (index){
 }
 
 function optionsSelected (ans){
+    clearInterval(counter);
     let userSelet = ans.textContent;
     let correctAns=questions[totalCount].answer;
-    let onlyOneselected = MyOptions.children.length;
+    let allOptions = MyOptions.children.length;
     if(userSelet == correctAns){
-        ans.classList.add('correct');
+        ans.classList.add('correct')
         console.log("You'r answer is right");
+        ans.insertAdjacentHTML("beforeend",tikIcon);
     }else{
         ans.classList.add('incorrect');
         console.log("You'r answer is false");
-        for(let i = 0;i<onlyOneselected;i++){
-            if(MyOptions.children[i].textContent == correctAns){
-                MyOptions.children[i].setAttribute("class","options correct")
-            }
+        ans.insertAdjacentHTML("beforeend", crossIcon);
+        for(let i = 0 ; i < allOptions ; i ++){
+           if(MyOptions.children[i].textContent == correctAns){
+               MyOptions.children[i].setAttribute("class","options correct");
+
+               MyOptions.children[i].insertAdjacentHTML("beforeend",tikIcon);
+           }
         }
     }
 
-    for(let i = 0 ;i<onlyOneselected;i++){
-        MyOptions.children[i].classList.add("disable");
+    for(let i = 0 ;i < allOptions ; i ++){
+        MyOptions.children[i].classList.add('disable');
+    }
+
+    nextBtn.style.display = 'block';
+}
+
+function timesCounter (time){
+    counter = setInterval(timer,1000);
+
+    function timer(){
+        timeCount.textContent = time;
+        time--;
+
+        if(time <9){
+            let addZero = timeCount.textContent;
+            timeCount.textContent = "0" + addZero;
+        }
+
+        if(time <0){
+            clearInterval(timesCounter);
+            timeCount.textContent = "00";
+        }
     }
 }
+
+
 
 
